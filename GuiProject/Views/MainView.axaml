@@ -6,11 +6,56 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="GuiProject.Views.MainView"
              x:DataType="vm:MainViewModel">
-  <Design.DataContext>
-    <!-- This only sets the DataContext for the previewer in an IDE,
-         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-    <vm:MainViewModel />
-  </Design.DataContext>
 
-  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
+
+	<Grid ColumnDefinitions="200,5,*,5,250">
+
+		<!-- LEFT PANEL (Navigation) -->
+		<Border Grid.Column="0" Background="#054680" Padding="10">
+			<StackPanel Spacing="10">
+				<TextBlock Text="Menu" FontSize="18" Foreground="White"/>
+				<Button Content="Dashboard"/>
+				<Button Content="Map"/>
+				<Button Content="Settings"/>
+			</StackPanel>
+		</Border>
+
+		<!-- SPLITTER 1 -->
+		<GridSplitter Grid.Column="1"
+                      Width="5"
+                      Background="Gray"
+                      ResizeDirection="Columns"/>
+
+		<!-- CENTER PANEL (Flexible Content Area) -->
+		<Border Grid.Column="2" Background="#2d2d2d">
+			<ContentControl Content="{Binding}">
+				<!-- Future: switch between Map / Video / HUD -->
+			</ContentControl>
+		</Border>
+
+		<!-- SPLITTER 2 -->
+		<GridSplitter Grid.Column="3"
+                      Width="5"
+                      Background="Gray"
+                      ResizeDirection="Columns"/>
+
+		<!-- RIGHT PANEL (Telemetry) -->
+		<Border Grid.Column="4" Background="#054680" Padding="10">
+			<StackPanel Spacing="10">
+				<TextBlock Text="Telemetry" FontSize="18" Foreground="White"/>
+
+				<TextBlock Text="Status:" Foreground="White"/>
+				<TextBlock Text="{Binding Status}" Foreground="LightGreen"/>
+
+				<TextBlock Text="Data:" Foreground="White"/>
+				<TextBlock Text="{Binding TelemetryData}"
+                           TextWrapping="Wrap"
+                           Foreground="White"/>
+			</StackPanel>
+		</Border>
+
+	</Grid>
+
 </UserControl>
