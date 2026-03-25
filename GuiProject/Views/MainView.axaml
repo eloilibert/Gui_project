@@ -7,9 +7,24 @@
              x:Class="GuiProject.Views.MainView"
              x:DataType="vm:MainViewModel">
 
+	<!-- ========================= -->
+	<!-- BASE BUTTON -->
+	<!-- ========================= -->
+	<UserControl.Styles>
+		<Style Selector="Button">
+			<Setter Property="CornerRadius" Value="4"/>
+			<Setter Property="FontWeight" Value="SemiBold"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			<Setter Property="Transitions">
+				<Transitions>
+					<BrushTransition Property="Background" Duration="0:0:0.15"/>
+				</Transitions>
+			</Setter>
+		</Style>
+	</UserControl.Styles>
 
-
-
+	
 	<Grid ColumnDefinitions="200,5,*,5,250">
 
 		<!-- LEFT PANEL (Navigation) -->
@@ -29,10 +44,23 @@
                       ResizeDirection="Columns"/>
 
 		<!-- CENTER PANEL (Flexible Content Area) -->
-		<Border Grid.Column="2" Background="#2d2d2d">
-			<ContentControl Content="{Binding}">
-				<!-- Future: switch between Map / Video / HUD -->
-			</ContentControl>
+        <Border Grid.Column="2" Background="#2d2d2d">
+			<StackPanel>
+		
+				<!-- Blue buttons -->
+				<Button Classes="L fill blue" Content="Primary"/>
+				<Button Classes="M outlined blue" Content="Info"/>
+				<Button Classes="S ghost blue" Content="Link"/>
+
+				<Button Content="Hover Me" Classes="L fill blue"/>
+
+				<!-- Green buttons -->
+				<Button Classes="L fill green" Content="Confirm"/>
+				<Button Classes="M outlined green" Content="Success"/>
+				<Button Classes="S ghost green" Content="Action"/>
+				
+				
+			</StackPanel>
 		</Border>
 
 		<!-- SPLITTER 2 -->

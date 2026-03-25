@@ -1,0 +1,173 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450">
+	<!-- BASE BUTTON STYLE -->
+	<Style Selector="Button">
+		<Setter Property="CornerRadius" Value="4"/>
+		<Setter Property="FontWeight" Value="SemiBold"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Transitions">
+			<Transitions>
+				<BrushTransition Property="Background" Duration="0:0:0.15"/>
+			</Transitions>
+		</Setter>
+	</Style>
+
+	<!-- ========================= -->
+	<!-- SIZES -->
+	<!-- ========================= -->
+	<Style Selector="Button.L">
+		<Setter Property="Height" Value="48"/>
+		<Setter Property="MinWidth" Value="148"/>
+	</Style>
+
+	<Style Selector="Button.M">
+		<Setter Property="Height" Value="40"/>
+		<Setter Property="MinWidth" Value="140"/>
+	</Style>
+
+	<Style Selector="Button.S">
+		<Setter Property="Height" Value="36"/>
+		<Setter Property="MinWidth" Value="132"/>
+	</Style>
+
+	<Style Selector="Button.T">
+		<Setter Property="Height" Value="32"/>
+		<Setter Property="MinWidth" Value="118"/>
+	</Style>
+
+	<!-- ========================= -->
+	<!-- FILL STYLE -->
+	<!-- ========================= -->
+	<Style Selector="Button.fill">
+		<Setter Property="Foreground" Value="White"/>
+		
+	</Style>
+
+	<!-- ========================= -->
+	<!-- OUTLINED STYLE -->
+	<!-- ========================= -->
+	<Style Selector="Button.outlined">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="BorderThickness" Value="1.5"/>
+		
+	</Style>
+
+	<!-- ========================= -->
+	<!-- GHOST STYLE -->
+	<!-- ========================= -->
+	<Style Selector="Button.ghost">
+		<Setter Property="Background" Value="Transparent"/>
+		
+	</Style>
+
+	<!-- ========================= -->
+	<!-- TEXT STYLE -->
+	<!-- ========================= <Setter Property="BoxShadow" Value="0 4 10 0 #00000080"/>-->
+	<Style Selector="Button.text">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Foreground" Value="#0479F1"/>
+	</Style>
+
+	<!-- ========================= -->
+	<!-- BLUE THEME -->
+	<!-- ========================= -->
+	<Style Selector="Button.blue.fill">
+		<Setter Property="Background" Value="#0479F1"/>
+	</Style>
+	<Style Selector="Button.blue.fill:pointerover">
+		<Setter Property="Background" Value="#3694F4"/>
+	</Style>
+	<Style Selector="Button.blue.fill:pressed">
+		<Setter Property="Background" Value="#0356AB"/>
+	</Style>
+	<Style Selector="Button.blue.fill:disabled">
+		<Setter Property="Background" Value="#02163A"/>
+		<Setter Property="Opacity" Value="0.6"/>
+	</Style>
+
+	<Style Selector="Button.blue.outlined">
+		<Setter Property="BorderBrush" Value="#0479F1"/>
+		<Setter Property="Foreground" Value="#0479F1"/>
+	</Style>
+	<Style Selector="Button.blue.outlined:pointerover">
+		<Setter Property="BorderBrush" Value="#3694F4"/>
+		<Setter Property="Foreground" Value="#3694F4"/>
+	</Style>
+	<Style Selector="Button.blue.outlined:pressed">
+		<Setter Property="BorderBrush" Value="#0356AB"/>
+		<Setter Property="Foreground" Value="#0356AB"/>
+	</Style>
+	<Style Selector="Button.blue.outlined:disabled">
+		<Setter Property="BorderBrush" Value="#02163A"/>
+		<Setter Property="Foreground" Value="#02163A"/>
+		<Setter Property="Opacity" Value="0.6"/>
+	</Style>
+
+	<Style Selector="Button.blue.ghost">
+		<Setter Property="Foreground" Value="#3694F4"/>
+	</Style>
+	<Style Selector="Button.blue.ghost:pointerover">
+		<Setter Property="Foreground" Value="#6EA7F7"/>
+	</Style>
+	<Style Selector="Button.blue.ghost:pressed">
+		<Setter Property="Foreground" Value="#0356AB"/>
+	</Style>
+	<Style Selector="Button.blue.ghost:disabled">
+		<Setter Property="Foreground" Value="#02163A"/>
+		<Setter Property="Opacity" Value="0.6"/>
+	</Style>
+
+	<!-- ========================= -->
+	<!-- GREEN THEME -->
+	<!-- ========================= -->
+	<Style Selector="Button.green.fill">
+		<Setter Property="Background" Value="#16A34A"/>
+	</Style>
+	<Style Selector="Button.green.fill:pointerover">
+		<Setter Property="Background" Value="#22C55E"/>
+	</Style>
+	<Style Selector="Button.green.fill:pressed">
+		<Setter Property="Background" Value="#15803D"/>
+	</Style>
+	<Style Selector="Button.green.fill:disabled">
+		<Setter Property="Background" Value="#052E16"/>
+		<Setter Property="Opacity" Value="0.6"/>
+	</Style>
+
+	<Style Selector="Button.green.outlined">
+		<Setter Property="BorderBrush" Value="#16A34A"/>
+		<Setter Property="Foreground" Value="#16A34A"/>
+	</Style>
+	<Style Selector="Button.green.outlined:pointerover">
+		<Setter Property="BorderBrush" Value="#22C55E"/>
+		<Setter Property="Foreground" Value="#22C55E"/>
+	</Style>
+	<Style Selector="Button.green.outlined:pressed">
+		<Setter Property="BorderBrush" Value="#15803D"/>
+		<Setter Property="Foreground" Value="#15803D"/>
+	</Style>
+	<Style Selector="Button.green.outlined:disabled">
+		<Setter Property="BorderBrush" Value="#052E16"/>
+		<Setter Property="Foreground" Value="#052E16"/>
+		<Setter Property="Opacity" Value="0.6"/>
+	</Style>
+
+	<Style Selector="Button.green.ghost">
+		<Setter Property="Foreground" Value="#22C55E"/>
+	</Style>
+	<Style Selector="Button.green.ghost:pointerover">
+		<Setter Property="Foreground" Value="#4ADE80"/>
+	</Style>
+	<Style Selector="Button.green.ghost:pressed">
+		<Setter Property="Foreground" Value="#15803D"/>
+	</Style>
+	<Style Selector="Button.green.ghost:disabled">
+		<Setter Property="Foreground" Value="#052E16"/>
+		<Setter Property="Opacity" Value="0.6"/>
+	</Style>
+
+</Styles>
