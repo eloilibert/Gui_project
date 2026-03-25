@@ -1,26 +1,20 @@
 <UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="using:GuiProject.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="GuiProject.Views.MainView"
-             x:DataType="vm:MainViewModel">
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:vm="using:GuiProject.ViewModels"
+			 xmlns:helpers="using:GuiProject.Helpers"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 x:Class="GuiProject.Views.MainView"
+			 x:DataType="vm:MainViewModel">
 
 
 
 
 	<Grid ColumnDefinitions="200,5,*,5,250">
 
-		<!-- LEFT PANEL (Navigation) -->
-		<Border Grid.Column="0" Background="#054680" Padding="10">
-			<StackPanel Spacing="10">
-				<TextBlock Text="Menu" FontSize="18" Foreground="White"/>
-				<Button Content="Dashboard"/>
-				<Button Content="Map"/>
-				<Button Content="Settings"/>
-			</StackPanel>
-		</Border>
+		<!-- LEFT PANEL (Sidebar) -->
+		<helpers:Sidebar Grid.Column="0"/>
 
 		<!-- SPLITTER 1 -->
 		<GridSplitter Grid.Column="1"
