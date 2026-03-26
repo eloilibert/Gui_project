@@ -3,7 +3,6 @@
     <File Path="Directory.Packages.props" />
   </Folder>
   <Project Path="GuiProject.Android/GuiProject.Android.csproj" />
-  <Project Path="GuiProject.Browser/GuiProject.Browser.csproj" />
   <Project Path="GuiProject.Desktop/GuiProject.Desktop.csproj" />
   <Project Path="GuiProject.iOS/GuiProject.iOS.csproj" />
   <Project Path="GuiProject/GuiProject.csproj" />
